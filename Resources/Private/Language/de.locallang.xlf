@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2014-05-01T18:00:00Z" product-name="bootstrap_links">
+		<header/>
+		<body>
+
+			<trans-unit id="browselinks.linkType.I.0" approved="yes">
+				<source>Modal Box</source> <target state="translated">Modal Fenster</target></trans-unit>
+			<trans-unit id="browselinks.linkType.I.1" approved="yes">
+				<source>Popover</source> <target state="translated">Popover</target></trans-unit>
+            <trans-unit id="browselinks.linkType.I.2" approved="yes">
+                <source>Button</source> <target state="translated">Schaltfläche</target></trans-unit>
+            <trans-unit id="browselinks.linkType.I.3" approved="yes">
+                <source>Icon Font</source> <target state="translated">Icon Font</target></trans-unit>
+
+			<trans-unit id="browselinks.style.I.0" approved="yes">
+				<source>Normal</source> <target state="translated">Normal</target></trans-unit>
+			<trans-unit id="browselinks.style.I.1" approved="yes">
+				<source>Button Primary</source> <target state="translated">Button Primär</target></trans-unit>
+			<trans-unit id="browselinks.style.I.2" approved="yes">
+				<source>Button Info</source> <target state="translated">Button Info</target></trans-unit>
+			<trans-unit id="browselinks.style.I.3" approved="yes">
+				<source>Button Warning</source> <target state="translated">Button Warnung</target></trans-unit>
+			<trans-unit id="browselinks.style.I.4" approved="yes">
+				<source>Button Alert</source> <target state="translated">Button Achtung</target></trans-unit>
+            <trans-unit id="browselinks.style.I.5" approved="yes">
+                <source>Button Grey</source> <target state="translated">Button Grau</target></trans-unit>
+            <trans-unit id="browselinks.style.I.6" approved="yes">
+                <source>Button Link</source> <target state="translated">Button Link</target></trans-unit>
+
+			<trans-unit id="browselinks.btnsize.I.0" approved="yes">
+				<source>Normal</source> <target state="translated">Normal</target></trans-unit>
+			<trans-unit id="browselinks.btnsize.I.1" approved="yes">
+				<source>Large</source> <target state="translated">Gross</target></trans-unit>
+			<trans-unit id="browselinks.btnsize.I.2" approved="yes">
+				<source>Small</source> <target state="translated">Klein</target></trans-unit>
+			<trans-unit id="browselinks.btnsize.I.3" approved="yes">
+				<source>Mini</source> <target state="translated">Mini</target></trans-unit>
+
+			<trans-unit id="browselinks.modalid" approved="yes">
+				<source>Modal ID</source> <target state="translated">Modal ID</target></trans-unit>
+
+			<trans-unit id="browselinks.desc" approved="yes">
+				<source>Description</source> <target state="translated">Beschreibung</target></trans-unit>
+			<trans-unit id="browselinks.position" approved="yes">
+				<source>Position</source> <target state="translated">Position</target></trans-unit>
+			<trans-unit id="browselinks.trigger" approved="yes">
+				<source>Trigger</source> <target state="translated">Auslöser</target></trans-unit>
+
+			<trans-unit id="browselinks.urloruid" approved="yes">
+				<source>Page Uid or URL</source> <target state="translated">Seiten Id oder URL</target></trans-unit>
+
+			<trans-unit id="browselinks.linkstyle" approved="yes">
+				<source>Link style</source> <target state="translated">Link Stil</target></trans-unit>
+			<trans-unit id="browselinks.title" approved="yes">
+				<source>Title</source> <target state="translated">Titel</target></trans-unit>
+			<trans-unit id="browselinks.style" approved="yes">
+				<source>Style</source> <target state="translated">Stil</target></trans-unit>
+			<trans-unit id="browselinks.size" approved="yes">
+				<source>Size</source> <target state="translated">Grösse</target></trans-unit>
+
+            <trans-unit id="browselinks.icon" approved="yes">
+                <source>Icon</source> <target state="translated">Icon</target></trans-unit>
+
+		</body>
+	</file>
+</xliff>

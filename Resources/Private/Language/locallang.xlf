@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-05-01T18:00:00Z" product-name="bootstrap_links">
+		<header/>
+		<body>
+
+			<trans-unit id="browselinks.linkType.I.0">
+				<source>Modal Box</source>
+			</trans-unit>
+			<trans-unit id="browselinks.linkType.I.1">
+				<source>Popover</source>
+			</trans-unit>
+            <trans-unit id="browselinks.linkType.I.2">
+                <source>Button</source>
+            </trans-unit>
+            <trans-unit id="browselinks.linkType.I.3">
+                <source>Icon Font</source>
+            </trans-unit>
+
+			<trans-unit id="browselinks.style.I.0">
+				<source>Normal</source>
+			</trans-unit>
+			<trans-unit id="browselinks.style.I.1">
+				<source>Button Primary</source>
+			</trans-unit>
+			<trans-unit id="browselinks.style.I.2">
+				<source>Button Info</source>
+			</trans-unit>
+			<trans-unit id="browselinks.style.I.3">
+				<source>Button Warning</source>
+			</trans-unit>
+			<trans-unit id="browselinks.style.I.4">
+				<source>Button Alert</source>
+			</trans-unit>
+            <trans-unit id="browselinks.style.I.5">
+                <source>Button Grey</source>
+            </trans-unit>
+            <trans-unit id="browselinks.style.I.6">
+                <source>Button Link</source>
+            </trans-unit>
+
+			<trans-unit id="browselinks.btnsize.I.0">
+				<source>Normal</source>
+			</trans-unit>
+			<trans-unit id="browselinks.btnsize.I.1">
+				<source>Large</source>
+			</trans-unit>
+			<trans-unit id="browselinks.btnsize.I.2">
+				<source>Small</source>
+			</trans-unit>
+			<trans-unit id="browselinks.btnsize.I.3">
+				<source>Mini</source>
+			</trans-unit>
+
+			<trans-unit id="browselinks.modalid">
+				<source>Modal ID</source>
+			</trans-unit>
+
+			<trans-unit id="browselinks.desc">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="browselinks.position">
+				<source>Position</source>
+			</trans-unit>
+			<trans-unit id="browselinks.trigger">
+				<source>Trigger</source>
+			</trans-unit>
+
+			<trans-unit id="browselinks.urloruid">
+				<source>Page Uid or URL</source>
+			</trans-unit>
+
+			<trans-unit id="browselinks.linkstyle">
+				<source>Link style</source>
+			</trans-unit>
+			<trans-unit id="browselinks.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="browselinks.style">
+				<source>Style</source>
+			</trans-unit>
+			<trans-unit id="browselinks.size">
+				<source>Size</source>
+			</trans-unit>
+
+            <trans-unit id="browselinks.icon">
+                <source>Icon</source>
+            </trans-unit>
+
+		</body>
+	</file>
+</xliff>
