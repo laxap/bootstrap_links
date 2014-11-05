@@ -1,0 +1,5 @@
+# cat=basic; type=string; label=Button Style Options: Comma separated list of supported button styles (e.g. btn-primary,btn-info,btn-default). Default: btn-primary,btn-info,btn-warning,btn-danger,btn-default,btn-link
+btnStyleOptions =
+# cat=basic; type=string; label=Button Size Options: Comma separated list of supported button sizes (e.g. btn-sm,btn-xs,btn-xxxxs:Super tiny). Default: btn-lg,btn-sm,btn-xs
+btnSizeOptions =
+

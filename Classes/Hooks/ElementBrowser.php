@@ -104,13 +104,12 @@ class ElementBrowser implements \TYPO3\CMS\Core\ElementBrowser\ElementBrowserHoo
 		$this->additionalParams = $additionalParameters;
 		$this->keyValues = array();
 
-		//$this->extConf = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['bootstrap_links']);
+		$this->extConf = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['bootstrap_links']);
 
 		// link types
 		$this->linkTypes = array('modal'   => \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('browselinks.linkType.I.0', 'bootstrap_links'),
 								 'popover' => \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('browselinks.linkType.I.1', 'bootstrap_links'),
 								 'button'  => \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('browselinks.linkType.I.2', 'bootstrap_links'));
-
 		// style options
 		$this->styleOptions = array(''            => \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('browselinks.style.I.0', 'bootstrap_links'),
 									'btn-primary' => \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('browselinks.style.I.1', 'bootstrap_links'),
@@ -125,6 +124,21 @@ class ElementBrowser implements \TYPO3\CMS\Core\ElementBrowser\ElementBrowserHoo
 									  'btn-lg' => \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('browselinks.btnsize.I.1', 'bootstrap_links'),
 									  'btn-sm' => \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('browselinks.btnsize.I.2', 'bootstrap_links'),
 									  'btn-xs'  => \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('browselinks.btnsize.I.3', 'bootstrap_links'));
+
+		// override available style options
+		if ( isset($this->extConf['btnStyleOptions']) && trim($this->extConf['btnStyleOptions']) != '' ) {
+			$this->styleOptions = $this->getOverrideOption($this->styleOptions,
+														   $this->extConf['btnStyleOptions'],
+														   \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('browselinks.style.I.0', 'bootstrap_links'));
+		}
+
+		// override available size options
+		if ( isset($this->extConf['btnSizeOptions']) && trim($this->extConf['btnSizeOptions']) != '' ) {
+			$this->btnSizeOptions = $this->getOverrideOption($this->btnSizeOptions,
+														   $this->extConf['btnSizeOptions'],
+														   \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('browselinks.btnsize.I.0', 'bootstrap_links'));
+		}
+
 	}
 
 	/**
@@ -524,6 +538,35 @@ class ElementBrowser implements \TYPO3\CMS\Core\ElementBrowser\ElementBrowserHoo
 
 
 		return '<div style="border: 1px solid #ccc; padding: 0.5em; margin-top: 1em;">' . $this->parentObject->barheader(\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('browselinks.linkstyle', 'bootstrap_links')) .  $content . '</div>';
+	}
+
+
+	/**
+	 * @param $source
+	 * @param $override
+	 * @param $defaultLabel
+	 * @return array
+	 */
+	protected function getOverrideOption($source, $override, $defaultLabel) {
+		$overrideOptions = explode(',',$override);
+		$newOptions = array('' =>  $defaultLabel);
+		foreach ( $overrideOptions as $option ) {
+			if ( isset($source[$option]) ) {
+				$newOptions[$option] = $source[$option];
+			} else {
+				// check if new
+				if ( strpos($option,':') ) {
+					list($oKey,$oText) = explode(':', $option);
+					if ( $oKey && $oText ) {
+						$newOptions[$oKey] = $oText;
+					}
+				}
+			}
+		}
+		if ( count($newOptions) > 1 ) {
+			return $newOptions;
+		}
+		return $source;
 	}
 
 }

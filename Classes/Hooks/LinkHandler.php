@@ -20,7 +20,7 @@ namespace Simplicity\BootstrapLinks\Hooks;
 	 ***************************************************************/
 
 /**
- * Linkhandler to for special twitter bootstrap elements.
+ * Linkhandler for special types.
 
  * @package BootstrapLinks
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
