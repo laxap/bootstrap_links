@@ -159,7 +159,7 @@ class ElementBrowser implements \TYPO3\CMS\Core\ElementBrowser\ElementBrowserHoo
 	 * @return array Modified menu definition
 	 */
 	public function modifyMenuDefinition($menuDefinition) {
-		if (in_array('bootstrap', $this->parentObject->allowedItems)) {
+		if (is_array($this->parentObject->allowedItems) && in_array('bootstrap', $this->parentObject->allowedItems)) {
 			$menuDefinition['bootstrap']['isActive'] = $this->parentObject->act=='bootstrap';
 			$menuDefinition['bootstrap']['label'] = 'Bootstrap';
 			$menuDefinition['bootstrap']['url'] = '#';
