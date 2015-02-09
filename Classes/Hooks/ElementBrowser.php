@@ -1,9 +1,9 @@
 <?php
-namespace Simplicity\BootstrapLinks\Hooks;
+namespace Laxap\BootstrapLinks\Hooks;
 
 	/***************************************************************
 	 *  Copyright notice
-	 *  (c) 2013 Simplicity GmbH <typo3(at)simple.ch>
+	 *  (c) 2015 Pascal Mayer <typo3(at)bsdist.ch>
 	 *  All rights reserved
 	 *  This script is part of the TYPO3 project. The TYPO3 project is
 	 *  free software; you can redistribute it and/or modify
