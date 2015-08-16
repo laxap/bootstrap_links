@@ -14,7 +14,7 @@ $EM_CONF[$_EXTKEY] = array (
 	'title' => 'Insert Link Extension for Bootstrap',
 	'description' => 'Adds another tab to the insert link window for bootstrap button links, popovers and links for opening modal boxes.',
 	'category' => 'misc',
-	'version' => '0.5.5',
+	'version' => '0.5.6',
 	'state' => 'beta',
 	'uploadfolder' => false,
 	'createDirs' => '',
@@ -26,7 +26,7 @@ $EM_CONF[$_EXTKEY] = array (
 	array (
 		'depends' => 
 		array (
-			'typo3' => '6.2.0-7.3.99',
+			'typo3' => '6.2.0-7.4.99',
 		),
 		'conflicts' => 
 		array (
