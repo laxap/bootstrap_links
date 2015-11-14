@@ -5,5 +5,12 @@
   "description": "Adds another tab to the insert link window for bootstrap button links, popovers and links for opening modal boxes.",
   "keywords": ["typo3", "TYPO3 CMS", "bootstrap", "bsdist", "links"],
   "homepage": "http://www.bsdist.ch",
-  "license": ["GPL-2.0"]
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Pascal Mayer",
+      "email": "typo3@bsdist.ch",
+      "role": "Developer"
+    }
+  ]
 }
