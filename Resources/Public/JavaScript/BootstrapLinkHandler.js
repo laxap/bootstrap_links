@@ -21,22 +21,6 @@ define(['jquery', 'TYPO3/CMS/Recordlist/LinkBrowser'], function($, LinkBrowser) 
 	 */
 	var BootstrapLinkHandler = {};
 
-	function getDefaultFieldsParams(form){
-		var input = '';
-		var title = $(form).find('[name="ltitle"]').val();
-		if ( title !== '' ) {
-			input += '&title=' + encodeURIComponent(title);
-		}
-		var style = $(form).find('[name="lstyle"]').val();
-		if ( style !== '' ) {
-			input += '&style=' + style;
-		}
-		var btnsize = $(form).find('[name="lbtnsize"]').val();
-		if ( btnsize !== '' ) {
-			input += '&btnsize=' + btnsize;
-		}
-		return input;
-	}
 
 	$(function() {
 		$('#lbslinkmodalform').on('submit', function(event) {
@@ -47,7 +31,6 @@ define(['jquery', 'TYPO3/CMS/Recordlist/LinkBrowser'], function($, LinkBrowser) 
 			}
 			var input = 'bootstrap:type=modal&value=' + value;
 
-			//input += getDefaultFieldsParams(this);
 			LinkBrowser.finalizeFunction(input);
 		});
 
@@ -67,7 +50,6 @@ define(['jquery', 'TYPO3/CMS/Recordlist/LinkBrowser'], function($, LinkBrowser) 
 				input += '&trigger=' + trigger;
 			}
 
-			//input += getDefaultFieldsParams(this);
 			LinkBrowser.finalizeFunction(input);
 		});
 
@@ -79,7 +61,6 @@ define(['jquery', 'TYPO3/CMS/Recordlist/LinkBrowser'], function($, LinkBrowser) 
 			}
 			var input = 'bootstrap:type=button&btnurl=' + value;
 
-			//input += getDefaultFieldsParams(this);
 			LinkBrowser.finalizeFunction(input);
 		});
 	});
