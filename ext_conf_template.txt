@@ -1,5 +1,7 @@
-# cat=basic; type=string; label=Button Style Options: Comma separated list of supported button styles (e.g. btn-primary,btn-info,btn-default). Supported only in TYPO3 6.2.x.
+# cat=basic; type=string; label=Button Style Options: Only in TYPO3 6.2.x. Comma separated list of supported button styles (e.g. btn-primary,btn-info,btn-default).
 btnStyleOptions =
-# cat=basic; type=string; label=Button Size Options: Comma separated list of supported button sizes (e.g. btn-sm,btn-xs,btn-xxxxs:Super tiny). Supported only in TYPO3 6.2.x.
+# cat=basic; type=string; label=Button Size Options: Only in TYPO3 6.2.x. Comma separated list of supported button sizes (e.g. btn-sm,btn-xs,btn-xxxxs:Super tiny).
 btnSizeOptions =
+# cat=basic; type=boolean; label=Add bootstrap button styles to the default link style options: Only in TYPO3 7.6.x.
+addBootstrapLinkStyles = 0
 
