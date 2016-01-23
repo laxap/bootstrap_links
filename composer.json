@@ -1,8 +1,8 @@
 {
   "name": "laxap/bootstrap-links",
   "type": "typo3-cms-extension",
-  "version": "0.5.7",
-  "description": "Adds another tab to the insert link window for bootstrap button links, popovers and links for opening modal boxes.",
+  "version": "0.6.0",
+  "description": "Adds another tab to the insert link window for bootstrap popovers and links for opening modal boxes.",
   "keywords": ["typo3", "TYPO3 CMS", "bootstrap", "bsdist", "links"],
   "homepage": "http://www.bsdist.ch",
   "license": "GPL-2.0+",

@@ -12,9 +12,9 @@
 
 $EM_CONF[$_EXTKEY] = array (
 	'title' => 'Insert Link Addon for Bootstrap',
-	'description' => 'Adds another tab to the insert link window for bootstrap button links, popovers and links for opening modal boxes.',
+	'description' => 'Adds another tab to the insert link window for bootstrap popovers and links for opening modal boxes.',
 	'category' => 'misc',
-	'version' => '0.5.7-dev',
+	'version' => '0.6.0',
 	'state' => 'beta',
 	'uploadfolder' => false,
 	'createDirs' => '',
