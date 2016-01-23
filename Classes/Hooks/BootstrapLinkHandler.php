@@ -42,9 +42,7 @@ class BootstrapLinkHandler extends AbstractLinkHandler implements LinkHandlerInt
 	 * @var array
 	 */
 	protected $tabs = array(array('type' => 'modal'),
-							array('type' => 'popover')
-							//,array('type' => 'button')
-	);
+							array('type' => 'popover'));
 
 	/**
 	 * @var string
@@ -60,16 +58,6 @@ class BootstrapLinkHandler extends AbstractLinkHandler implements LinkHandlerInt
 	 * @var array
 	 */
 	protected $popoverTriggers = array('hover', 'click', 'focus');
-
-	/**
-	 * @var array
-	 */
-	protected $buttonSizes = array('', 'btn-lg', 'btn-sm', 'btn-xs');
-
-	/**
-	 * @var array
-	 */
-	protected $styles = array('', 'btn-primary', 'btn-info', 'btn-warning', 'btn-danger', 'btn-default', 'btn-link');
 
 	/**
 	 * @var \TYPO3\CMS\Lang\LanguageService
@@ -255,9 +243,6 @@ class BootstrapLinkHandler extends AbstractLinkHandler implements LinkHandlerInt
 						</td>
 					</tr>';
 
-		// default fields
-		//$content .= $this->getDefaultFields();
-
 		return '<table border="0" cellpadding="2" cellspacing="1">' . $content . '</table>';
 	}
 
@@ -296,9 +281,6 @@ class BootstrapLinkHandler extends AbstractLinkHandler implements LinkHandlerInt
 		}
 		$content .= '</select></td></tr>';
 
-		// default fields
-		//$content .= $this->getDefaultFields();
-
 		return '<table border="0" cellpadding="2" cellspacing="1">' . $content . '</table>';
 	}
 
@@ -312,9 +294,6 @@ class BootstrapLinkHandler extends AbstractLinkHandler implements LinkHandlerInt
 							<input class="btn btn-default" type="submit" value="' . $this->getLanguageService()->getLL('setLink', true) . '" />
 						</td>
 					</tr>';
-
-		// default fields
-		//$content .= $this->getDefaultFields();
 
 		return '<table border="0" cellpadding="2" cellspacing="1">' . $content . '</table>';
 	}
@@ -331,32 +310,6 @@ class BootstrapLinkHandler extends AbstractLinkHandler implements LinkHandlerInt
 			$addOnClass = '';
 		}
 		return '<div role="tabpanel" class="tab-pane ' . $addOnClass . '" id="bslink' . $type . '">' . $innerHtml . '</div>';
-	}
-
-	/**
-	 * @return string
-	 */
-	protected function getDefaultFields() {
-		$content = '<tr><td colspan="2"><h4>' . $this->lang->getLL('browselinks.linkstyle') . '</h4></td></tr>';
-		$content .= '<tr><td style="width: 96px;">' . $this->lang->getLL('browselinks.title') . '</td>';
-		$content .= '<td><input type="text" name="ltitle" size="30" value="' . urldecode(!empty($this->linkParts['title']) ? $this->linkParts['title'] : '') . '" /></td></tr>';
-
-		$content .= '<tr><td style="width: 96px;">' . $this->lang->getLL('browselinks.style') . '</td>';
-		$content .= '<td><select name="lstyle">';
-		foreach ( $this->styles as $index => $style ) {
-			( $this->linkParts['style'] == $style) ? $selected = ' selected="selected"' : $selected = '';
-			$content .= '<option value="' . $style . '" ' . $selected . '>' . $this->lang->getLL('browselinks.style.I.' . $index) . '</option>';
-		}
-		$content .= '</select></td></tr>';
-
-		$content .= '<tr><td style="width: 96px;">' . $this->lang->getLL('browselinks.size') . '</td>';
-		$content .= '<td><select name="lbtnsize">';
-		foreach ( $this->buttonSizes as $index => $sizeClass ) {
-			( $this->linkParts['btnsize'] == $sizeClass) ? $selected = ' selected="selected"' : $selected = '';
-			$content .= '<option value="' . $sizeClass . '" ' . $selected . '>' . $this->lang->getLL('browselinks.btnsize.I.' . $index) . '</option>';
-		}
-		$content .= '</select> ' . $this->lang->getLL('browselinks.onlyForButtons') .  '</td></tr>';
-		return $content;
 	}
 }
 
