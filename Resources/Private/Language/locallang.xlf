@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2014-05-01T18:00:00Z" product-name="bootstrap_links">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-01-23T10:00:00Z" product-name="bootstrap_links">
 		<header/>
 		<body>
-
+			<trans-unit id="tabtitle">
+				<source>Bootstrap</source>
+			</trans-unit>
 			<trans-unit id="browselinks.linkType.I.0">
 				<source>Modal Box</source>
 			</trans-unit>
@@ -16,6 +18,15 @@
             <trans-unit id="browselinks.linkType.I.3">
                 <source>Icon Font</source>
             </trans-unit>
+			<trans-unit id="browselinks.linkType.I.modal">
+				<source>Modal Box</source>
+			</trans-unit>
+			<trans-unit id="browselinks.linkType.I.popover">
+				<source>Popover</source>
+			</trans-unit>
+			<trans-unit id="browselinks.linkType.I.button">
+				<source>Button</source>
+			</trans-unit>
 
 			<trans-unit id="browselinks.style.I.0">
 				<source>Normal</source>
@@ -83,9 +94,12 @@
 				<source>Size</source>
 			</trans-unit>
 
-            <trans-unit id="browselinks.icon">
-                <source>Icon</source>
-            </trans-unit>
+			<trans-unit id="browselinks.icon">
+				<source>Icon</source>
+			</trans-unit>
+			<trans-unit id="browselinks.onlyForButtons">
+				<source>(only for style btn*)</source>
+			</trans-unit>
 
 		</body>
 	</file>

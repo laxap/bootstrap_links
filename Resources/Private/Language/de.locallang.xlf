@@ -12,6 +12,12 @@
                 <source>Button</source> <target state="translated">Schaltfläche</target></trans-unit>
             <trans-unit id="browselinks.linkType.I.3" approved="yes">
                 <source>Icon Font</source> <target state="translated">Icon Font</target></trans-unit>
+			<trans-unit id="browselinks.linkType.I.modal" approved="yes">
+				<source>Modal Box</source> <target state="translated">Modal Fenster</target></trans-unit>
+			<trans-unit id="browselinks.linkType.I.popover" approved="yes">
+				<source>Popover</source> <target state="translated">Popover</target></trans-unit>
+			<trans-unit id="browselinks.linkType.I.button" approved="yes">
+				<source>Button</source> <target state="translated">Schaltfläche</target></trans-unit>
 
 			<trans-unit id="browselinks.style.I.0" approved="yes">
 				<source>Normal</source> <target state="translated">Normal</target></trans-unit>
@@ -61,6 +67,9 @@
 
             <trans-unit id="browselinks.icon" approved="yes">
                 <source>Icon</source> <target state="translated">Icon</target></trans-unit>
+
+			<trans-unit id="browselinks.onlyForButtons" approved="yes">
+				<source>(only for style btn*)</source> <target state="translated">(nur für Stil btn*)</target></trans-unit>
 
 		</body>
 	</file>

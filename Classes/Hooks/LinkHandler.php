@@ -2,8 +2,6 @@
 namespace Laxap\BootstrapLinks\Hooks;
 
 /*
- * This file is part of the TYPO3 CMS project.
- *
  * It is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License, either version 2
  * of the License, or any later version.
@@ -11,7 +9,6 @@ namespace Laxap\BootstrapLinks\Hooks;
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
  *
- * The TYPO3 project - inspiring people to share!
  */
 
 /**
@@ -34,13 +31,12 @@ class LinkHandler {
 	 * @return string
 	 */
 	public function main($linktxt, $conf, $linkHandlerKeyword, $linkHandlerValue, $linkParams, &$contentObjectRenderer) {
-
 		// build the typolink when the requested record and the nessesary cofiguration are available
 		$cObjectRenderer = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer');
 		$cObjectRenderer->start(null);
 		//$type = $cObjectRenderer->data['type'];
 
-		// get link params after handler keyword and value
+		// get link params after handler keyword and value (e.g. for target, title)
 		$typo3LinkParams = trim(substr($linkParams,strlen($linkHandlerKeyword . ":" . $linkHandlerValue)));
 
 		// get key-value array from linkHandlerValue
@@ -50,7 +46,6 @@ class LinkHandler {
 			$cObjectRenderer->typoLink($linktxt, array('parameter' => $linkParams));
 		}
 
-		$lconf = array();
 		// based on link type
 		switch ( $linkValueArray['type'] ) {
 			case 'modal':
@@ -67,6 +62,7 @@ class LinkHandler {
 				$aTagParams .= ' data-content="' . rawurldecode($linkValueArray['desc']) . '"';
 				// link config
 				$lconf = array('parameter' => $GLOBALS['TSFE']->id . ' ' . $typo3LinkParams,
+							   'section' => '#',
 							   'ATagParams' => $aTagParams);
 				break;
 
@@ -77,7 +73,7 @@ class LinkHandler {
 
 			// if unknown type, return normal link
 			default:
-				$cObjectRenderer->typoLink($linktxt, array('parameter' => $linkParams));
+				return $cObjectRenderer->typoLink($linktxt, array('parameter' => $linkParams));
 				break;
 		}
 
