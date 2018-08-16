@@ -109,7 +109,7 @@ class LinkHandler {
 	 * @return array
 	 */
 	protected function getKeyValueArray($valueString) {
-		$keyValuePairs = explode('&', $valueString);
+		$keyValuePairs = explode('&amp;', $valueString);
 		$keyValueArray = array();
 		if ( is_array($keyValuePairs) ) {
 			foreach ( $keyValuePairs as $keyValue ) {
