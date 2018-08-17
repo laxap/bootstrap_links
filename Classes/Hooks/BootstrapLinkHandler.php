@@ -100,20 +100,18 @@ class BootstrapLinkHandler extends AbstractLinkHandler implements LinkHandlerInt
 		if ( ! $linkParts['url']) {
 			return false;
 		}
-		if ( substr($linkParts['url'], 0, 10) !== 'bootstrap:' ) {
+		if ( $linkParts['type'] != 'bootstrap' ){
 			return false;
 		}
-		$this->linkParts = $linkParts;
+		$this->linkParts = $linkParts['url'];
 
 		// get type from e.g. url = "bootstrap:type=popover"
-		$partOne = explode(':', $linkParts['url'], 2);
+		$partOne = explode(':', $linkParts['url']['url'], 2);
 		if ( isset($partOne[1]) ) {
 			list($typeKey, $typeValue) = explode('=', $partOne[1], 2);
 
 			// get type from e.g. url = "bootstrap:type=popover&desc=TestPopover&pos=right&trigger=click"
-			if ( isset($linkParts['data-htmlarea-external']) && $linkParts['data-htmlarea-external'] == 1 ) {
-				list($typeValue, $linkParts['params']) = explode('&', $typeValue, 2);
-			}
+			list($typeValue, $linkParts['params']) = explode('&', $typeValue, 2);
 
 			if( $typeKey == 'type' ) {
 				$this->activeTab = $typeValue;

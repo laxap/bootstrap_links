@@ -18,7 +18,7 @@ if ( TYPO3\CMS\Core\Utility\VersionNumberUtility::convertVersionNumberToInteger(
 
 } else {
 	// --- Hook in TYPO3\CMS\Core\Html\RteHtmlParser.php and TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer ---
-	$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['tslib/class.tslib_content.php']['typolinkLinkHandler']['bootstrap']  = 'EXT:bootstrap_links/Classes/Hooks/LinkHandler.php:&Laxap\BootstrapLinks\Hooks\LinkHandler';
+	$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['tslib/class.tslib_content.php']['typolinkLinkHandler']['bootstrap']  = 'Laxap\BootstrapLinks\Hooks\LinkHandler';
 
 	if ( isset($extConf['addBootstrapLinkStyles']) && $extConf['addBootstrapLinkStyles'] ) {
 		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_links/Configuration/TypoScript/tsconfig.ts">');
